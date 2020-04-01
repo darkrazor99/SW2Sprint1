@@ -4,12 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.SW2.enteties.Userentinty;
-import com.SW2.models.DatabaseSeeder;
 import com.SW2.models.Repository;
 import com.SW2.models.UserModel;
 
@@ -17,7 +15,6 @@ import com.SW2.models.UserModel;
 public class UserController {
 	@Autowired
 	private Repository repository;
-	private DatabaseSeeder seeder=new DatabaseSeeder(repository);
 	@RequestMapping("/all")
 	public List<Userentinty> ListUsers(){
 		UserModel usermodel = new UserModel(repository);
