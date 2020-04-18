@@ -7,5 +7,6 @@ import com.SW2.enteties.Userentinty;
 
 @org.springframework.stereotype.Repository
 public interface Repository extends JpaRepository<Userentinty,Long>{
+	Userentinty findByUsername(String username);
 }
 
